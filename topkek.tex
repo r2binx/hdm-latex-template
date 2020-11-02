@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{index}
+\usepackage{amsmath}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage[x11names]{xcolor}
+\usepackage{censor}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+
+\addtokomafont{disposition}{\rmfamily}
+\setmainfont{HdMFrutigerNextPro-Light}
+\definecolor{hdm_red}{RGB}{229, 20, 51}
+\definecolor{hdm_grey}{RGB}{63, 72, 71}
+\newcommand{\email}{xy123@hdm-stuttgart.de}
+
+
+\title{\textbf{Mensch-Computer-Interaktion}}
+\subtitle{Abgabe X}
+\author{Name Nachname}
+\pagenumbering{Roman}
+
+% Definition of \maketitle
+\makeatletter         
+\def\@maketitle{
+\raggedleft
+\includegraphics[scale=.3]{img/hdm_logo.jpg}
+\vspace{\dimexpr-\parskip+20pt}
+\begin{center}
+{\Huge \bfseries \rmfamily \@title}\\[4ex] 
+{\textcolor{hdm_grey}\Large \@subtitle} \\[4ex]
+{\textcolor{hdm_grey}\Large  \@author}\\
+{\censor{\textcolor{hdm_grey}\Large  \email}}\\[4ex]
+\@date\\[8ex]
+\end{center}}
+\makeatother
+
+\begin{document}
+  \begin{titlepage}
+    \clearpage\maketitle
+    \textcolor{hdm_red}{\hspace*{3cm}\makebox[\linewidth]{\rule{20cm}{3pt}}}
+    \thispagestyle{empty}
+
+  \end{titlepage}
+ 
+  \clearpage\tableofcontents
+  \thispagestyle{empty}
+
+  \newpage
+  \setcounter{page}{1}
+ 
+ 
+  \section{Abschnitt A}
+    \blindtext[2]
+    \pagebreak
+
+  \section{Abschnitt B}
+    \blindtext[3]
+
+
+\end{document}
